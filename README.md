@@ -5,7 +5,15 @@ This script will remove all existing close-wait connections on the server
 $ apt-get install libnet-rawip-perl libnet-pcap-perl libnetpacket-perl
 ```
 
-# Usage
+## CentOS
+```
+yum install libpcap-devel
+perl -MCPAN -e 'install NetPacket'
+perl -MCPAN -e 'install Net::Pcap'
+perl -MCPAN -e 'install Net::RawIP'
+```
+
+## Usage
 ```
 $ ./kill_close_wait_connections.pl
 ```
